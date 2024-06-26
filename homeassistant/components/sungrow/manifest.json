@@ -1,0 +1,15 @@
+{
+  "domain": "sungrow",
+  "name": "Sungrow",
+  "codeowners": ["@klaren"],
+  "config_flow": true,
+  "dhcp": [
+    {
+      "macaddress": "5443B2*"
+    }
+  ],
+  "documentation": "https://www.home-assistant.io/integrations/sungrow",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "loggers": ["SungrowWebsocketClient"]
+}

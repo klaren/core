@@ -1,0 +1,44 @@
+{
+  "config": {
+    "flow_title": "{device}",
+    "step": {
+      "user": {
+        "title": "Sungrow WiNet",
+        "description": "Configure the IP address or local hostname of your WiNet-S dongle.",
+        "data": {
+          "host": "[%key:common::config_flow::data::host%]"
+        }
+      },
+      "confirm_discovery": {
+        "description": "Do you want to add {device} to Home Assistant?"
+      }
+    },
+    "error": {
+      "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
+      "unknown": "[%key:common::config_flow::error::unknown%]"
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]",
+      "invalid_host": "[%key:common::config_flow::error::invalid_host%]"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "energy_day": {
+        "name": "Energy day"
+      },
+      "energy_total": {
+        "name": "Total energy"
+      },
+      "frequency_ac": {
+        "name": "[%key:component::sensor::entity_component::frequency::name%]"
+      },
+      "state_of_charge": {
+        "name": "State of charge"
+      },
+      "temperature_cell": {
+        "name": "[%key:component::sensor::entity_component::temperature::name%]"
+      }
+    }
+  }
+}
